@@ -72,11 +72,11 @@ Inverted Index: Es una estructura de datos que relaciona palabras con las pelíc
 
 a) Inserción: Durante la construcción del índice, el sistema tokenizar el texto de cada película y almacena cada palabra dentro de una tabla hash junto con su identificador
 
-<img src="ReadmeResource/Arquitectura.png" width="500">
+<img src="ReadmeResource/InvertedIndex.png" width="500">
 
 b) Búsqueda exacta: Cuando el usuario realiza una búsqueda exacta, el sistema consulta directamente el índice utilizando la palabra ingresada.
 
-<img src="ReadmeResource/Arquitectura.png" width="500">
+<img src="ReadmeResource/BusquedaExacta.png" width="500">
 
 Por otro lado, la complejidad temporal de la inserción y búsqueda dentro del Inverted Index utilizan tablas hash (unordered_map), permitiendo tiempos de acceso promedio muy bajos.
 
@@ -89,11 +89,11 @@ Suffix Trie: Es una estructura de árbol que almacena todos los sufijos posibles
 
 a) Inserción: Para construir el Suffix Trie, el sistema genera todos los sufijos posibles del texto e inserta cada uno carácter por carácter dentro del árbol.
 
-<img src="ReadmeResource/Arquitectura.png" width="500">
+<img src="ReadmeResource/SuffixTrie.png" width="500">
 
 b) Búsqueda parcial: Cuando el usuario realiza una búsqueda parcial, el sistema recorre el árbol carácter por carácter verificando si el patrón existe dentro de los sufijos almacenados.
 
-<img src="ReadmeResource/Arquitectura.png" width="500">
+<img src="ReadmeResource/BusquedaParcial.png" width="500">
 
 La complejidad temporal de la búsqueda parcial depende únicamente de la longitud del patrón buscado, ya que el recorrido del árbol se realiza carácter por carácter.
 
@@ -106,7 +106,7 @@ La complejidad temporal de la búsqueda parcial depende únicamente de la longit
 
 Búsqueda Híbrida: La búsqueda híbrida combina el uso del Inverted Index y el Suffix Trie para mejorar la precisión del sistema. Por un lado, el Inverted Index se encarga de reducir el universo de búsqueda seleccionando únicamente las películas que contienen palabras clave exactas de la consulta. Luego, el Suffix Trie verifica si la frase o subcadena completa realmente aparece dentro del título o sinopsis, refinando así los resultados obtenidos.
 
-<img src="ReadmeResource/Arquitectura.png" width="500">
+<img src="ReadmeResource/BusquedaHibrida.png" width="500">
 
 ## 5. Sistema de recomendación:
 El sistema de relevancia tiene como objetivo determinar qué películas son más importantes respecto a la búsqueda realizada por el usuario. Para ello, el sistema asigna un puntaje acumulativo según el tipo de coincidencia encontrada dentro de la información.
