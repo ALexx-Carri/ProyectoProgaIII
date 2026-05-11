@@ -44,3 +44,24 @@ Combinación entre algoritmos previamente mencionados, el Inverted Index se util
 ---
 
 Además se implementa un sistema de recomendación utilizando un enfoque de Content-Based Filtering, recomendando películas según similitudes en género, palabras clave, contenido de la sinopsis, e interacciones realizadas por el usuario mediante “Like”. Asimismo, para determinar la relevancia de una película al momento de la búsqueda, el sistema asigna un puntaje acumulativo basado en los criterios ya mencionados.
+
+## 2. Tecnologías Utilizadas
+
+| Elemento | Tecnología |
+|---|---|
+| IDE utilizado | CLion |
+| Lenguaje de programación | C++ 20 |
+| Control de versiones | Git y GitHub |
+| Librerías utilizadas | STL (Standard Template Library) |
+| Formato de almacenamiento de datos | CSV |
+
+---
+
+#$ 3. Arquitectura
+
+El sistema sigue una arquitectura modular orientada al procesamiento, almacenamiento y búsqueda eficiente de información de películas. El flujo inicia con la lectura de archivos CSV que contienen títulos, sinopsis y atributos como género, director y elenco. Posteriormente, los datos pasan por una etapa de limpieza y tokenización, donde se normalizan caracteres, se eliminan símbolos innecesarios y el texto se divide en palabras para optimizar las búsquedas. Una vez procesados los datos, el sistema construye dos estructuras principales:
+
+- **Inverted Index**, encargado de relacionar palabras completas con las películas donde aparecen para realizar búsquedas exactas.
+- **Suffix Trie**, utilizado para búsquedas parciales o por subcadenas dentro de títulos y sinopsis.
+
+Ambas estructuras son utilizadas por un motor de búsqueda híbrida que combina precisión y eficiencia: el **Inverted Index** permite filtrar rápidamente películas candidatas mediante coincidencias exactas y el **Suffix Trie** complementa el proceso verificando coincidencias parciales dentro de los resultados obtenidos. Finalmente, el sistema organiza las películas mediante un algoritmo de relevancia que prioriza coincidencias en títulos, sinopsis, tags e interacciones del usuario, mostrando como resultado las cinco películas más relevantes según la búsqueda realizada.
