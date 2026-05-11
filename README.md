@@ -57,11 +57,57 @@ Además se implementa un sistema de recomendación utilizando un enfoque de Cont
 
 ---
 
-#$ 3. Arquitectura
+## 3. Arquitectura
 
-El sistema sigue una arquitectura modular orientada al procesamiento, almacenamiento y búsqueda eficiente de información de películas. El flujo inicia con la lectura de archivos CSV que contienen títulos, sinopsis y atributos como género, director y elenco. Posteriormente, los datos pasan por una etapa de limpieza y tokenización, donde se normalizan caracteres, se eliminan símbolos innecesarios y el texto se divide en palabras para optimizar las búsquedas. Una vez procesados los datos, el sistema construye dos estructuras principales:
+El sistema sigue una arquitectura modular orientada al procesamiento, almacenamiento y búsqueda eficiente de información de películas. El flujo inicia con la lectura de archivos CSV que contienen títulos, sinopsis y atributos como género, director y elenco. Posteriormente, los datos pasan por una etapa de limpieza y tokenización, donde se normalizan caracteres, se eliminan símbolos innecesarios y el texto se divide en palabras para optimizar las búsquedas. Una vez procesados los datos, el sistema construye dos estructuras principales: un Inverted Index, encargado de relacionar palabras completas con las películas donde aparecen para realizar búsquedas exactas, y un Suffix Trie, utilizado para búsquedas parciales o por subcadenas dentro de títulos y sinopsis.
 
-- **Inverted Index**, encargado de relacionar palabras completas con las películas donde aparecen para realizar búsquedas exactas.
-- **Suffix Trie**, utilizado para búsquedas parciales o por subcadenas dentro de títulos y sinopsis.
+Ambas estructuras son utilizadas por un motor de búsqueda híbrida que combina precisión y eficiencia. El Inverted Index permite filtrar rápidamente películas candidatas mediante coincidencias exactas, mientras que el Suffix Trie complementa el proceso verificando coincidencias parciales dentro de los resultados obtenidos. Finalmente, el sistema organiza las películas mediante un algoritmo de relevancia que prioriza coincidencias en títulos, sinopsis, tags e interacciones del usuario, mostrando como resultado las cinco películas más relevantes según la búsqueda realizada. 
 
-Ambas estructuras son utilizadas por un motor de búsqueda híbrida que combina precisión y eficiencia: el **Inverted Index** permite filtrar rápidamente películas candidatas mediante coincidencias exactas y el **Suffix Trie** complementa el proceso verificando coincidencias parciales dentro de los resultados obtenidos. Finalmente, el sistema organiza las películas mediante un algoritmo de relevancia que prioriza coincidencias en títulos, sinopsis, tags e interacciones del usuario, mostrando como resultado las cinco películas más relevantes según la búsqueda realizada.
+![Texto alternativo](images/arquitectura.png)
+
+
+## 4. Explicación de algoritmos:
+
+Inverted Index: Es una estructura de datos que relaciona palabras con las películas en las que aparecen. Su objetivo es optimizar búsquedas exactas dentro de títulos, sinopsis y tags, permitiendo acceder rápidamente a los documentos asociados a una palabra específica. 
+
+| En lugar de almacenar | El sistema almacena |
+|---|---|
+| película → palabras | palabra → películas |
+
+a) Inserción: Durante la construcción del índice, el sistema tokenizar el texto de cada película y almacena cada palabra dentro de una tabla hash junto con su identificador
+
+![Texto alternativo](images/arquitectura.png)
+
+b) Búsqueda exacta: Cuando el usuario realiza una búsqueda exacta, el sistema consulta directamente el índice utilizando la palabra ingresada.
+
+![Texto alternativo](images/arquitectura.png)
+
+Por otro lado, la complejidad temporal de la inserción y búsqueda dentro del Inverted Index utilizan tablas hash (unordered_map), permitiendo tiempos de acceso promedio muy bajos.
+
+| Operación | Complejidad |
+|---|---|
+| Inserción | O(1) |
+| Búsqueda exacta | O(1) |
+
+Suffix Trie: Es una estructura de árbol que almacena todos los sufijos posibles de un texto. Su función principal es permitir búsquedas parciales o por subcadenas dentro de palabras y frases. Gracias a esta estructura, el sistema puede encontrar coincidencias incluso cuando el usuario ingresa únicamente una parte de la palabra.
+
+a) Inserción: Para construir el Suffix Trie, el sistema genera todos los sufijos posibles del texto e inserta cada uno carácter por carácter dentro del árbol.
+
+![Texto alternativo](images/arquitectura.png)
+
+b) Búsqueda parcial: Cuando el usuario realiza una búsqueda parcial, el sistema recorre el árbol carácter por carácter verificando si el patrón existe dentro de los sufijos almacenados.
+
+![Texto alternativo](images/arquitectura.png)
+
+La complejidad temporal de la búsqueda parcial depende únicamente de la longitud del patrón buscado, ya que el recorrido del árbol se realiza carácter por carácter.
+
+| Operación | Complejidad |
+|---|---|
+| Complejidad Construcción del Trie | O(n²) |
+| Búsqueda parcial | O(m) |
+
+> *Donde n representa la longitud total del texto y m representa la longitud del patrón buscado.*
+
+Búsqueda Híbrida: La búsqueda híbrida combina el uso del Inverted Index y el Suffix Trie para mejorar la precisión del sistema. Por un lado, el Inverted Index se encarga de reducir el universo de búsqueda seleccionando únicamente las películas que contienen palabras clave exactas de la consulta. Luego, el Suffix Trie verifica si la frase o subcadena completa realmente aparece dentro del título o sinopsis, refinando así los resultados obtenidos.
+
+![Texto alternativo](images/arquitectura.png)
