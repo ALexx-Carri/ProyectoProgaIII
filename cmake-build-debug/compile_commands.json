@@ -1,0 +1,68 @@
+[
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\main.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\main.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/main.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\utils\\DataCleaner.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\utils\\DataCleaner.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/utils/DataCleaner.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/utils/DataCleaner.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\utils\\CSVReader.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\utils\\CSVReader.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/utils/CSVReader.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/utils/CSVReader.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\utils\\Tokenizar.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\utils\\Tokenizar.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/utils/Tokenizar.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/utils/Tokenizar.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\structures\\InvertedIndex.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\structures\\InvertedIndex.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/structures/InvertedIndex.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/structures/InvertedIndex.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\structures\\SuffixNode.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\structures\\SuffixNode.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/structures/SuffixNode.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/structures/SuffixNode.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\structures\\SuffixTrie.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\structures\\SuffixTrie.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/structures/SuffixTrie.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/structures/SuffixTrie.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\systems\\RankingSystem.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\systems\\RankingSystem.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/systems/RankingSystem.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/systems/RankingSystem.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\systems\\RecommendationSystem.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\systems\\RecommendationSystem.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/systems/RecommendationSystem.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/systems/RecommendationSystem.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\systems\\SearchEngine.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\systems\\SearchEngine.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/systems/SearchEngine.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/systems/SearchEngine.cpp.obj"
+},
+{
+  "directory": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\new_proyect.dir\\models\\Movie.cpp.obj -c \"C:\\Users\\Alvaro\\Documents\\new proyect\\models\\Movie.cpp\"",
+  "file": "C:/Users/Alvaro/Documents/new proyect/models/Movie.cpp",
+  "output": "C:/Users/Alvaro/Documents/new proyect/cmake-build-debug/CMakeFiles/new_proyect.dir/models/Movie.cpp.obj"
+}
+]
