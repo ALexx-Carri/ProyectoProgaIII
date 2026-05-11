@@ -5,7 +5,7 @@ Enlace de repositorio de GitHub: https://github.com/ALexx-Carri/ProyectoProgaIII
 
 ---
 
-# INTEGRANTES
+### INTEGRANTES
 
 | Nombre y apellido | Código |
 |---|---|
