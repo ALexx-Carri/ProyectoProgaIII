@@ -60,7 +60,7 @@ El sistema sigue una arquitectura modular orientada al procesamiento, almacenami
 
 Ambas estructuras son utilizadas por un motor de búsqueda híbrida que combina precisión y eficiencia. El Inverted Index permite filtrar rápidamente películas candidatas mediante coincidencias exactas, mientras que el Suffix Trie complementa el proceso verificando coincidencias parciales dentro de los resultados obtenidos. Finalmente, el sistema organiza las películas mediante un algoritmo de relevancia que prioriza coincidencias en títulos, sinopsis, tags e interacciones del usuario, mostrando como resultado las cinco películas más relevantes según la búsqueda realizada. 
 
-![Texto alternativo](images/arquitectura.png)
+![Texto alternativo](Readme/Screenshot 2026-05-10 043826.png)
 
 
 ## 4. Explicación de algoritmos:
