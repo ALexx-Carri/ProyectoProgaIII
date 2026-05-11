@@ -1,4 +1,4 @@
-# PROYECTO: Motor de búsqueda para plataformas de streaming
+# Motor de búsqueda para plataformas de streaming
 
 CURSO: Programación III
 Enlace de repositorio de GitHub: https://github.com/ALexx-Carri/ProyectoProgaIII
