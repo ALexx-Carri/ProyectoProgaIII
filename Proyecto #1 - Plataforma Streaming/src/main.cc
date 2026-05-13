@@ -28,11 +28,11 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);    
     Plataforma plataforma;
     
-    cout << "\n📀 Cargando base de datos..." << endl;
+    cout << "\n Cargando base de datos..." << endl;
     cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" << endl;
     
     if(!plataforma.cargarCSV("wiki_movie_plots_deduped.csv")) {
-        cout << "❌ No se pudo cargar el archivo." << endl;
+        cout << "No se pudo cargar el archivo." << endl;
         cout << "Asegúrate de que 'wiki_movie_plots_deduped.csv' está en la misma carpeta." << endl;
         return 1;
     }
@@ -46,7 +46,7 @@ int main() {
         switch(opcion) {
             case 1: {
                 string consulta;
-                cout << "\n🔍 Buscar: ";
+                cout << "\n Buscar: ";
                 getline(cin, consulta);
                 
                 vector<int> resultados = plataforma.buscarGeneral(consulta);
@@ -75,7 +75,7 @@ int main() {
             }
             case 2: {
                 string genero;
-                cout << "\n🎭 Género: ";
+                cout << "\n Género: ";
                 getline(cin, genero);
                 
                 vector<int> resultados = plataforma.buscarPorGenero(genero);
@@ -85,7 +85,7 @@ int main() {
             }
             case 3: {
                 string director;
-                cout << "\n🎬 Director: ";
+                cout << "\n Director: ";
                 getline(cin, director);
                 
                 vector<int> resultados = plataforma.buscarPorDirector(director);
@@ -95,9 +95,9 @@ int main() {
             }
             case 4: {
                 string texto, genero;
-                cout << "\n🔍 Texto a buscar: ";
+                cout << "\n Texto a buscar: ";
                 getline(cin, texto);
-                cout << "🎭 Género: ";
+                cout << " Género: ";
                 getline(cin, genero);
                 
                 vector<int> resultados = plataforma.buscarCombinado(texto, genero);
@@ -132,10 +132,10 @@ int main() {
                 plataforma.mostrarEstadisticas();
                 break;
             case 0:
-                cout << "\n👋 ¡Hasta luego!" << endl;
+                cout << "\n ¡Hasta luego!" << endl;
                 break;
             default:
-                cout << "\n❌ Opción no válida" << endl;
+                cout << "\n Opción no válida" << endl;
         }
     } while(opcion != 0);
     
